@@ -1,4 +1,4 @@
-package com.app.servlet;
+package com.app.servlet.controlador;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
