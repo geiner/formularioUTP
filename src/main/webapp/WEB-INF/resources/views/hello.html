@@ -6,7 +6,7 @@
                 <div class="col-md-6 control-group" >
                     <label class="control-label col-md-5">Nombres <span style="color:red;">*</span></label>
                     <div class="controls col-md-7">
-                        <input type="text" placeholder="Ejm. Koike" class="form-control">
+                        <input type="text" placeholder="Ejm. Koike" class="form-control" id="nombres">
                     </div>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                 <div class="col-md-6 control-group" >
                     <label class="control-label col-md-5">Apellidos <span style="color:red;">*</span></label>
                     <div class="controls col-md-7">
-                        <input type="text" placeholder="Ejm. Koike" class="form-control">
+                        <input type="text" placeholder="Ejm. Koike" class="form-control" id="apellidos">
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <div class="col-md-6 control-group" >
                     <label class="control-label col-md-5">DNI <span style="color:red;">*</span></label>
                     <div class="controls col-md-7">
-                        <input type="text" placeholder="Ejm. Koike" class="form-control">
+                        <input type="text" placeholder="Ejm. Koike" class="form-control" id="dni">
                     </div>
                 </div>
             </div>
@@ -33,7 +33,10 @@
                 <div class="col-md-6 control-group" >
                     <label class="control-label col-md-5">Provincia <span style="color:red;">*</span></label>
                     <div class="controls col-md-7">
-                        <input type="text" placeholder="Ejm. Koike" class="form-control">
+                        <select id="empl_provincia" class="form-control">
+                            <option value="99">Seleccione Provincia</option>
+                            <option value="{{prov.provincia}}" ng-repeat="prov in provincias">{{prov.desc_provincia}}</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -42,7 +45,10 @@
                 <div class="col-md-6 control-group" >
                     <label class="control-label col-md-5">Distrito <span style="color:red;">*</span></label>
                     <div class="controls col-md-7">
-                        <input type="text" placeholder="Ejm. Koike" class="form-control">
+                        <select id="empl_distrito" class="form-control">
+                            <option value="99">Seleccione Distrito</option>
+                            <option value="{{dist.distrito}}" ng-repeat="dist in distritos">{{dist.desc_distrito}}</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -51,7 +57,7 @@
                 <div class="col-md-6 control-group" >
                     <label class="control-label col-md-5">Direccion <span style="color:red;">*</span></label>
                     <div class="controls col-md-7">
-                        <input type="text" id="apePaterno" name="apPaterno" placeholder="Ejm. Koike" class="form-control">
+                        <textarea type="text" class="form-control" id="direccion"/>
                     </div>
                 </div>
             </div>
@@ -62,7 +68,7 @@
                     <div class="col-md-5"></div>
                     <div class="col-md-7">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-save"></span> Grabar</button>
+                            <button type="button" class="btn btn-primary" ng-click="grabar();"><span class="glyphicon glyphicon-floppy-save"></span> Grabar</button>
                         </div>
                         <div class="col-md-6">
                             <button type="reset" class="btn btn-default" id="updateServ"><span class="glyphicon glyphicon-refresh"></span> Cancelar</button>
@@ -72,4 +78,21 @@
             </div>
         </fieldset>
     </form>
+</div>
+
+<div class="modal fade" id="mensaje">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Registro de Empleado</h4>
+            </div>
+            <div class="modal-body">
+                <p>El empleado se guardo correctamente!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>

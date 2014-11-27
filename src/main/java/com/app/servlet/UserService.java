@@ -1,4 +1,4 @@
-package com.app.servlet.controlador;
+package com.app.servlet;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.GrantedAuthority;

@@ -45,11 +45,11 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="typeAliasesPackage" value="com.app.servlet.persistence"/>
+        <property name="typeAliasesPackage" value="com.app.servlet.persistencia"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.app.servlet.persistence"/>
+        <property name="basePackage" value="com.app.servlet.persistencia"/>
     </bean>
 
 </beans>

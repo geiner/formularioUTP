@@ -11,6 +11,26 @@ public class Empleado {
     private Integer distrito;
     private String direccion;
 
+    //para provincia
+    private String desc_provincia;
+    private String desc_distrito;
+
+    public String getDesc_provincia() {
+        return desc_provincia;
+    }
+
+    public void setDesc_provincia(String desc_provincia) {
+        this.desc_provincia = desc_provincia;
+    }
+
+    public String getDesc_distrito() {
+        return desc_distrito;
+    }
+
+    public void setDesc_distrito(String desc_distrito) {
+        this.desc_distrito = desc_distrito;
+    }
+
     public String getNombres() {
         return nombres;
     }

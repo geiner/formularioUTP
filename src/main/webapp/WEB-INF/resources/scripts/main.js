@@ -11,7 +11,7 @@ require.config({
         angular: VarsApp.libUrl +'/angular/angular',
         'angular-route': VarsApp.libUrl +'/angular-route/angular-route',
         jquery: VarsApp.libUrl +'/jquery/dist/jquery.min',
-        //bootstrap:VarsApp.libUrl+'/bootstrap/dist/js/bootstrap.min',
+        bootstrap:VarsApp.libUrl+'/bootstrap/dist/js/bootstrap.min',
         'angular-mocks': VarsApp.libUrl +'/angular-mocks/angular-mocks',
         'angular-cookies':VarsApp.libUrl+'/angular-cookies/angular-cookies',
         'angular-sanitize':VarsApp.libUrl+'/angular-sanitize/angular-sanitize',
@@ -58,11 +58,11 @@ require.config({
             deps:['jquery'],
             'exports':'immersive'
         }
-        /*,
+        ,
         'bootstrap': {
             deps: ['jquery'],
             exports: "$.fn.popover"
-        }*/
+        }
     },
     priority: [
         'angular'
@@ -77,7 +77,7 @@ require([
     'app',
     'angular-route',
     'jquery',
-    //'bootstrap',
+    'bootstrap',
     'angular-cookies',
     'angular-sanitize',
     'angular-resource',
