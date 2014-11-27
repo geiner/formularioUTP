@@ -39,13 +39,14 @@ create table distrito (
   nombdistri varchar(30)
 );
 create table empleado (
-  codemple integer,
+  codemple integer NOT NULL AUTO_INCREMENT,
   nombemple varchar(50),
   apepater varchar(50),
   dni integer(8),
   direccion varchar(100),
   codprovi integer,
-  coddistri integer
+  coddistri integer,
+  PRIMARY KEY (codemple)
 );
 insert into provincia values(1,'Cañete');
 insert into provincia values(2,'Huaral');

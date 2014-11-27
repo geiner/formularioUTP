@@ -17,12 +17,7 @@ require.config({
         'angular-sanitize':VarsApp.libUrl+'/angular-sanitize/angular-sanitize',
         'angular-resource':VarsApp.libUrl+'/angular-resource/angular-resource',
         'angular-animate':VarsApp.libUrl+'/angular-animate/angular-animate.min',
-        'angular-touch':VarsApp.libUrl+'/angular-touch/angular-touch.min',
-        'semantic':VarsApp.libUrl+'/semantic/semantic.min',
-        moment:VarsApp.libUrl+'/moment/moment',
-        datetimepicker:VarsApp.libUrl+'/datetimepicker/bootstrap-datetimepicker.min',
-        immersive:VarsApp.libUrl+'/immersive-slider/jquery.immersive-slider',
-        vegas:VarsApp.libUrl+'/vegas/jquery.vegas.min'
+        'angular-touch':VarsApp.libUrl+'/angular-touch/angular-touch.min'
     },
     shim: {
         'angular' : {'exports' : 'angular'},
@@ -39,26 +34,6 @@ require.config({
         jquery: {
             exports: "$"
         },
-        semantic:{
-            deps:['jquery'],
-            'exports':'semantic'
-        },
-        moment:{
-            deps:['jquery']
-        },
-        datetimepicker:{
-            deps:['jquery','moment'],
-            'exports':'datetimepicker'
-        },
-        vegas:{
-            deps:['jquery'],
-            'exports':'vegas'
-        },
-        immersive:{
-            deps:['jquery'],
-            'exports':'immersive'
-        }
-        ,
         'bootstrap': {
             deps: ['jquery'],
             exports: "$.fn.popover"
@@ -82,11 +57,7 @@ require([
     'angular-sanitize',
     'angular-resource',
     'angular-animate',
-    'angular-touch',
-    'semantic',
-    'datetimepicker',
-    'vegas',
-    'immersive'
+    'angular-touch'
 ], function(angular, app, ngRoutes,$,bootstrap, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch,semantic) {
     'use strict';
     /* jshint ignore:start */

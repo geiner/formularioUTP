@@ -26,8 +26,7 @@ public interface EmpleadoMapper {
     })
     List<Empleado> Distritos(@Param("idprov")int idprov);
 
-    @Insert(value = "insert into empleado values(\n" +
-            "(select NVL(max(codemple),0)+1 from empleado),\n" +
+    @Insert(value = "insert into empleado(nombemple,apepater,dni,direccion,codprovi,coddistri) VALUES(\n" +
             "#{worker.nombres},\n" +
             "#{worker.apellidos},\n" +
             "#{worker.dni},\n" +
